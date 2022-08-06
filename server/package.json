@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "This is the server file of Ideao",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "server":"nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Utsav Bhatttarai",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}

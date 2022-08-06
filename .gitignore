@@ -1,0 +1,22 @@
+
+# Client File
+client/node_modules
+client/dist
+client/dist-ssr
+client/.env
+
+# Server File
+server/node_modules
+server/.env
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
