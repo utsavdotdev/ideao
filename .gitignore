@@ -1,13 +1,13 @@
 
 # Client File
-client/node_modules
-client/dist
-client/dist-ssr
-client/.env
+/client/node_modules
+/client/dist
+/client/dist-ssr
+/client/.env
 
 # Server File
-server/node_modules
-server/.env
+/server/node_modules
+/server/.env
 *.local
 
 # Editor directories and files

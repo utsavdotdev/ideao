@@ -1,7 +1,29 @@
-import React from "react";
-
+import React, { useState, useContext } from "react";
+import "../css/Navbar.css";
+import { RiLightbulbFlashLine as Logo } from "react-icons/ri";
+import { ContextProvider } from "../config/Context";
 function Navbar() {
-  return <></>;
+  const { mdl } = useContext(ContextProvider);
+  const [modal, setModal] = mdl;
+  return (
+    <>
+      <div className="nav_container">
+        <div className="left">
+          <div className="logo">
+            <Logo size="25" />
+          </div>
+          <h3 className="logo_text">Ideao</h3>
+        </div>
+        <div className="right">
+          <button className="btn" onClick={() => setModal(!modal)}>
+            <p className="login">
+              Login
+            </p>
+          </button>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Navbar;

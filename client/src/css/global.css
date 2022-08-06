@@ -5,10 +5,16 @@
 }
 :root{
    --bgcolor:#2C3333;
-   --primary:#8A39E1;
-   --light_primary:#B667F1;
-   --white:#fff;
-   --black:#00000;
+   --primary:#703EFF;
+   --light_primary:#8960fc;
+   --white:rgb(255, 255, 255);
+   --dark_white:#efefef;
+   --black:#000;
+   --light_gray:#afafaf;
+   --gray:grey;
+   --overlay:rgba(0,0,0,0.5);
+   --hover:#364051;
+   --sec:#2C3639
 }
 body{
     background-color: var(--bgcolor);

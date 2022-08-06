@@ -1,0 +1,58 @@
+.nav_container{
+    height:70px;
+    width: 100%;
+    background-color: var(--sec);
+    position: sticky;
+    top:0;
+    left:0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    cursor: pointer;
+}
+.logo{
+  background-color: var(--light_primary);
+  width:30px;
+  height:30px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_text{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.btn{
+    outline: none;
+    background-color: var(--primary);
+    border:none;
+    padding-block:8px;
+    padding-inline:17px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: var(--light_primary);
+}
+.login{
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 540px) {
+    .nav_container{
+        padding-inline: 20px;
+    }
+    }
