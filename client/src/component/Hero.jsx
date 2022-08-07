@@ -1,15 +1,10 @@
 import React, { useContext } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import "../css/Hero.css";
-import { ContextProvider } from "../config/Context";
-import Modal from "./Modal";
 
 function Hero() {
-  const { mdl } = useContext(ContextProvider);
-  const [modal, setModal] = mdl;
   return (
     <>
-      {modal && <Modal />}
       <section className="hero_container">
         <div className="container">
           <div className="top">

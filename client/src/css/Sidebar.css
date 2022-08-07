@@ -1,19 +1,16 @@
 .sidebar{
     background-color: var(--sec);
-    width:200px;
-    height:100%;
-    margin-top: 80px;
-    position: fixed;
-    margin-left: 10px;
+    height:90vh;
+    min-width: 200px;
+    position: sticky;
     border-radius: 10px;
-
 }
 .sidebar ul{
     margin-top:8px
 }
 .active{
-    color: var(--primary) !important;
-    border-right: 1.5px solid var(--primary);
+    color: var(--light_primary) !important;
+    border-right: 1.5px solid var(--light_primary);
 }
 .sidebar ul a{
     align-items: center;
@@ -31,5 +28,57 @@
 }
 ul li:hover a{
     background-color: var(--hover);
+}
+.divider1{
+    margin-block: 10px;
+    margin-inline: auto;
+    width:80%;
+    height:0.5px;
+    background-color: var(--gray);
+    opacity: 0.3;
+}
+.social_link{
+    display: flex;
+    gap:10px;
+    left:20px;
+    position: absolute;
+    bottom:70px
+}
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 4px;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+    color:var(--white)
+}
+.a:hover{
+    background-color: #1DA1F2;
+}
+.b:hover{
+    background-color: #171515;
+}
+.c:hover{
+    background-color: #E1306C;
+}
+.bottommost{
+    position: absolute;
+    bottom:20px;
+    left:10px
+}
+.copyright{
+    font-size: 11px;
+}
+.divider2{
+    margin-block: 10px;
+    width:80%;
+    height:0.5px;
+    background-color: var(--gray);
+    opacity: 0.3;
 }
 
