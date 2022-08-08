@@ -1,7 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, {  useContext } from "react";
 import "../css/Navbar.css";
 import { RiLightbulbFlashLine as Logo } from "react-icons/ri";
 import { ContextProvider } from "../config/Context";
+import {Link} from "react-router-dom"
 import Modal from "./Modal";
 function Navbar() {
   const { mdl } = useContext(ContextProvider);
@@ -14,7 +15,7 @@ function Navbar() {
           <div className="logo">
             <Logo size="25" />
           </div>
-          <h3 className="logo_text">Ideao</h3>
+          <Link to="/"><h3 className="logo_text">Ideao</h3></Link>
         </div>
         <div className="right">
           <button className="btn" onClick={() => setModal(!modal)}>

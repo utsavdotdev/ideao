@@ -1,10 +1,11 @@
 import React from "react";
 import "../css/Sidebar.css";
-import { BiHome } from "react-icons/bi";
+import { VscHome } from "react-icons/vsc";
 import { MdOutlineExplore } from "react-icons/md";
-import { FaRegLightbulb } from "react-icons/fa";
-import { BiSearchAlt } from "react-icons/bi";
+import { AiOutlineBulb } from "react-icons/ai";
+import { IoIosSearch } from "react-icons/io";
 import { FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
+import {IoAddCircle} from "react-icons/io5"
 import { NavLink } from "react-router-dom";
 
 function Sidebar() {
@@ -12,53 +13,60 @@ function Sidebar() {
     <>
       {/* Sidebar */}
       <div className="sidebar">
-        <ul>
-          <li>
-            <NavLink to="/app">
-              <BiHome size="20" />
-              Home
+        <ul className="nav__list">
+          <li className="nav__item">
+            <NavLink to="/app" className="nav__link">
+              <VscHome  className="nav__icon" />
+              <span className="nav__name">Home</span>
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/explore">
-              <MdOutlineExplore size="20" />
-              Explore
+          <li className="nav__item">
+            <NavLink to="/explore" className="nav__link">
+              <MdOutlineExplore  className="nav__icon" />
+              <span className="nav__name">Explore</span>
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/search" >
-              <BiSearchAlt size="20" />
-              Search
+          <li className="nav__item extra">
+            <NavLink to="/explore" className="nav__link">
+              <IoAddCircle className="nav__icon" size="32" color="#fff"/>
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/myidea" >
-              <FaRegLightbulb size="20" />
-              My Ideas
+          <li className="nav__item">
+            <NavLink to="/search" className="nav__link">
+              <IoIosSearch  className="nav__icon"/>
+              <span className="nav__name">Search</span>
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/myidea" className="nav__link">
+              <AiOutlineBulb  className="nav__icon" />
+              <span className="nav__name">My Idea</span>
             </NavLink>
           </li>
         </ul>
-        <div className="divider1"></div>
-        <div className="social_link">
-          <a href="https://twitter.com/utsavbhatrai007" target={"_blank"}>
-            <div className="link a">
-              <FaTwitter size={20} />
-            </div>
-          </a>
-          <a href="https://github.com/utsavbhattarai007" target={"_blank"}>
-            <div className="link b">
-              <FaGithub size={20} />
-            </div>
-          </a>
-          <a href="http://instagram.com/utsavbhattarai007" target={"_blank"}>
-            <div className="link c">
-              <FaInstagram size={20} />
-            </div>
-          </a>
-        </div>
-        <div className="bottommost">
-        <div className="divider2"></div>
-          <p className="copyright">&copy; 2022 Ideao</p>
+        <div className="bottom_part">
+          <div className="divider1"></div>
+          <div className="social_link">
+            <a href="https://twitter.com/utsavbhatrai007" target={"_blank"}>
+              <div className="link a">
+                <FaTwitter size={20} />
+              </div>
+            </a>
+            <a href="https://github.com/utsavbhattarai007" target={"_blank"}>
+              <div className="link b">
+                <FaGithub size={20} />
+              </div>
+            </a>
+            <a href="http://instagram.com/utsavbhattarai007" target={"_blank"}>
+              <div className="link c">
+                <FaInstagram size={20} />
+              </div>
+            </a>
+          </div>
+          <div className="bottommost">
+            <div className="divider2"></div>
+            <p className="copyright">&copy; 2022 Ideao</p>
+          </div>
         </div>
       </div>
     </>

@@ -3,6 +3,9 @@
     margin:0;
     padding: 0;
 }
+h1,h2,h3,h4{
+    color:var(--white)
+}
 :root{
    --bgcolor:#2C3333;
    --primary:#703EFF;
@@ -14,7 +17,8 @@
    --gray:grey;
    --overlay:rgba(0,0,0,0.5);
    --hover:#364051;
-   --sec:#2C3639
+   --sec:#2C3639;
+  --tiny-font-size: .625rem;
 }
 body{
     background-color: var(--bgcolor);
@@ -24,3 +28,7 @@ body{
 a{
     text-decoration: none;
 }
+ul {
+    list-style: none;
+  }
+  

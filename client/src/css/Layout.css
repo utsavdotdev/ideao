@@ -12,9 +12,20 @@
     border:1px solid red;
     flex:3;
     background:var(--sec);
+    /* height:100vh */
 }
 .other{
     border:1px solid blue;
-    flex:1.2;
+    flex:1.4;
     background:var(--sec);
+}
+@media screen and (max-width: 872px) {
+    .other{
+        flex:1.7
+    }
+}
+@media screen and (max-width: 576px) {
+    .other{
+        display: none;
+    }
 }

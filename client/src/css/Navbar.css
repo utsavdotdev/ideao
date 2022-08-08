@@ -2,7 +2,7 @@
     height:70px;
     width: 100%;
     background-color: var(--sec);
-    position: sticky;
+    position: fixed;
     top:0;
     left:0;
     position: absolute;

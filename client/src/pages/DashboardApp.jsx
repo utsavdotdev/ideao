@@ -9,7 +9,7 @@ function DashboardApp() {
       <Navbar />
       <div className="layout">
         <Sidebar />
-        <div className="main">Home </div>
+        <div className="main">Home</div>
         <div className="other"></div>
       </div>
     </>
