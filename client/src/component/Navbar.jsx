@@ -3,13 +3,13 @@ import "../css/Navbar.css";
 import { RiLightbulbFlashLine as Logo } from "react-icons/ri";
 import { ContextProvider } from "../config/Context";
 import {Link} from "react-router-dom"
-import Modal from "./Modal";
+import LoginModal from "./LoginModal";
 function Navbar() {
   const { mdl } = useContext(ContextProvider);
   const [modal, setModal] = mdl;
   return (
     <>
-    {modal && <Modal/>}
+    {modal && <LoginModal/>}
       <div className="nav_container">
         <div className="left">
           <div className="logo">

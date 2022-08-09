@@ -17,7 +17,6 @@
 @media screen and (max-width: 860px){
     .footer_container{
         height: auto;
-
         flex-direction: column-reverse;
         gap:8px;
         align-items: flex-start;
