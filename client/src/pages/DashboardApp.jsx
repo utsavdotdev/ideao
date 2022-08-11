@@ -3,6 +3,7 @@ import Sidebar from "../component/Sidebar";
 import Navbar from "../component/Navbar";
 import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
+import AppHome from "../component/parts/AppHome";
 
 function DashboardApp() {
   return (
@@ -10,7 +11,9 @@ function DashboardApp() {
       <Navbar />
       <div className="layout">
         <Sidebar />
-        <div className="main">Home</div>
+        <div className="main">
+          <AppHome/>
+        </div>
         <div className="other"></div>
       </div>
       <AddIdea/>

@@ -20,7 +20,8 @@ h1,h2,h3,h4{
    --sec:#2C3639;
    --input:#3a474b;
   --tiny-font-size: .625rem;
-  --border: rgba(128,128,128,0.308)
+  --border: rgba(128,128,128,0.308);
+  --dim_gray:#9C9B98;
 }   
 body{
     background-color: var(--bgcolor);

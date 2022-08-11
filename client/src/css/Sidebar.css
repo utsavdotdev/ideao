@@ -5,6 +5,8 @@
   position: sticky;
   border-radius: 10px;
   left: 0;
+  z-index: 10;
+  /* top:80px */
 }
 .sidebar .nav__list {
   margin-top: 8px;
@@ -95,7 +97,7 @@
 @media screen and (max-width: 872px) {
   .sidebar {
     position: fixed;
-    bottom: 0;
+    bottom: 0 !important;
     left: 0;
     background-color: var(--sec);
     width: 100%;

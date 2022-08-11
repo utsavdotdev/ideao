@@ -17,7 +17,6 @@ const PostModal = () => {
   const [open, setOpen] = opn;
 
   const [tags, setTags] = useState([]);
-
   const handleDelete = (i) => {
     setTags(tags.filter((tag, index) => index !== i));
   };

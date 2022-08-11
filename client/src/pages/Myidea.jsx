@@ -3,6 +3,7 @@ import Sidebar from "../component/Sidebar";
 import Navbar from "../component/Navbar";
 import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
+import AppMyidea from "../component/parts/AppMyidea"
 
 function Myidea() {
   return (
@@ -10,11 +11,12 @@ function Myidea() {
       <Navbar />
       <div className="layout">
         <Sidebar />
-        <div className="main">My idea </div>
+        <div className="main">
+           <AppMyidea/>
+        </div>
         <div className="other"></div>
       </div>
-      <AddIdea/>
-
+      <AddIdea />
     </>
   );
 }

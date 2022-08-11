@@ -1,20 +1,20 @@
 .hero_container {
-  height: calc(100vh - 80px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container {
+.hero_wrapper {
   display: flex;
   flex-direction: column;
   padding-inline: 30px;
 }
-.top {
+.hero_top {
   text-align: center;
-  margin-top: 18vh;
+  margin-top: 15vh;
   padding-inline: 10px;
 }
-.heading {
+.hero_heading {
   font-size: clamp(2.5rem,8vw,4rem);
 }
 .text_logo {
@@ -22,7 +22,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.bottom {
+.hero_bottom {
   text-align: center;
   justify-content: center;
   display: flex;
@@ -30,7 +30,7 @@
   max-width: 800px;
   padding-inline: 10px;
   }
-.sub_heading {
+.hero_sub_heading {
   font-size: clamp(17px,5vw,20px);
   line-height: 30px;
 }
