@@ -4,13 +4,17 @@ import React, { createContext, useState } from "react";
 export const ContextProvider = createContext();
 const Context = (props) => {
 
-  //Modal State
+  //LoginModal State
   const [modal, setModal] = useState(false);
+
+  //Post Modal state
+  const [open,setOpen] = useState(false);
   return (
     <>
       <ContextProvider.Provider
         value={{
           mdl: [modal, setModal],
+          opn: [open,setOpen]
         }}
       >
         {props.children}

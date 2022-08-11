@@ -40,7 +40,7 @@
     justify-content: center;
     margin-block: 30px;
 }
-input[type=text]{
+.search_input{
     width:80%;
     outline:none;
     border:none;
@@ -51,7 +51,7 @@ input[type=text]{
     font-size: 18px;
     color:var(--gray)
 }
-input::placeholder{
+.search_input::placeholder{
     color:var(--light_gray);
     font-weight: 400;
     font-size: 15px;

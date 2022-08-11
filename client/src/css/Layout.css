@@ -1,23 +1,24 @@
 .layout{
-    margin-top: 80px;
+    position: relative;
+    top:80px;
     margin-inline: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap:10px;
 }
 .main{
     display: flex;
     align-items: center;
     justify-content: center;
-    border:1px solid red;
     flex:3;
     background:var(--sec);
-    /* height:100vh */
+    height:300px;
 }
 .other{
-    border:1px solid blue;
     flex:1.4;
     background:var(--sec);
+    height:300px
 }
 @media screen and (max-width: 872px) {
     .other{

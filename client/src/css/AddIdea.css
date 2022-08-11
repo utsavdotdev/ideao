@@ -11,18 +11,12 @@
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  transform: translateY(-10%);
-  animation: floater 1.5s infinite;
+  align-items: center;  
   transition: ease 1s;
 }
-@keyframes floater {
-  0% {
-    transform: translateY(-10%);
-    transition: ease 1s;
-  }
-  50% {
-    transform: translateY(10%);
-    transition: ease 1s;
+
+@media screen and (max-width: 872px) {
+  .add_btn{
+    display: none;
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../css/Sidebar.css";
 import { VscHome } from "react-icons/vsc";
 import { MdOutlineExplore } from "react-icons/md";
@@ -7,8 +7,11 @@ import { IoIosSearch } from "react-icons/io";
 import { FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 import {IoAddCircle} from "react-icons/io5"
 import { NavLink } from "react-router-dom";
+import { ContextProvider } from "../config/Context";
 
 function Sidebar() {
+  const { opn } = useContext(ContextProvider);
+  const [open,setOpen] = opn;
   return (
     <>
       {/* Sidebar */}
@@ -26,7 +29,7 @@ function Sidebar() {
               <span className="nav__name">Explore</span>
             </NavLink>
           </li>
-          <li className="nav__item extra">
+          <li className="nav__item extra" onClick={() => setOpen(!open)}>
             <NavLink to="/explore" className="nav__link">
               <IoAddCircle className="nav__icon" size="32" color="#fff"/>
             </NavLink>
@@ -65,7 +68,7 @@ function Sidebar() {
           </div>
           <div className="bottommost">
             <div className="divider2"></div>
-            <p className="copyright">&copy; 2022 Ideao</p>
+            <p className="copyright">&copy; {new Date().getFullYear()} Ideao</p>
           </div>
         </div>
       </div>

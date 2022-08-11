@@ -18,7 +18,7 @@ function Hero() {
               awesome ideas which helps developer to craft them.{" "}
             </p>
             <div className="search_container">
-              <input type="text" placeholder="Search Ideas..." />
+              <input className="search_input" type="text" placeholder="Search Ideas..." />
               <button className="searchbtn">
                 <BiSearchAlt size="25" />
               </button>

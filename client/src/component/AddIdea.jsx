@@ -1,11 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
 import "../css/AddIdea.css"
 import {BsPlusLg} from "react-icons/bs"
-import { useState } from "react";
 import PostModal from "./PostModal";
+import { ContextProvider } from "../config/Context";
 
 const AddIdea = () => {
-    const [open,setOpen] = useState(false)
+  const { opn } = useContext(ContextProvider);
+  const [open,setOpen] = opn;
+
   return (
     <>
     {open && <PostModal/>}

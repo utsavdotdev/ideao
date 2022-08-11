@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "../css/Modal.css";
+import "../css/LoginModal.css";
 import { ContextProvider } from "../config/Context";
 import { BiX } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
