@@ -4,6 +4,7 @@ import Navbar from "../component/Navbar";
 import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
 import AppMyidea from "../component/parts/AppMyidea"
+import Stat from "../component/Stat";
 
 function Myidea() {
   return (
@@ -14,7 +15,9 @@ function Myidea() {
         <div className="main">
            <AppMyidea/>
         </div>
-        <div className="other"></div>
+        <div className="other">
+          <Stat/>
+        </div>
       </div>
       <AddIdea />
     </>

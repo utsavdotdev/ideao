@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import "../css/Hero.css";
+import SearchBar from "./SearchBar";
 
 function Hero() {
   return (
@@ -17,12 +18,7 @@ function Hero() {
               Ideao is the web platform for exploring and contributing the
               awesome ideas which helps developer to craft them.{" "}
             </p>
-            <div className="search_container">
-              <input className="search_input" type="text" placeholder="Search Ideas..." />
-              <button className="searchbtn">
-                <BiSearchAlt size="25" />
-              </button>
-            </div>
+            <SearchBar/>
           </div>
         </div>
       </section>

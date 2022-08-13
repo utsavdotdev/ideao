@@ -5,8 +5,8 @@ const IdeaCard = () => {
     <>
       <div className="idea_card_container">
         <div className="idea_card_name_container">
-          <image
-            src="/assets/pic.jpg"
+          <img
+            src="https://lh3.googleusercontent.com/-stWcQqcBZIQ/AAAAAAAAAAI/AAAAAAAAAAA/AHYzNgpIfU1ph3OVWPLlSQKrdKyolIxlUg/photo.jpg?sz=46"
             className="idea_card_pp_image"
             alt="Profile pic"
           />
@@ -16,22 +16,26 @@ const IdeaCard = () => {
           </div>
         </div>
         <div className="idea_card_des_container">
-            <p className="idea_card_title">This is title</p>
-            <p className="idea_card_des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus asperiores placeat quas omnis, sint ad commodi . . .</p>
+          <p className="idea_card_title">This is title</p>
+          <p className="idea_card_des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            asperiores placeat quas omnis, sint ad commodi . . .
+          </p>
 
-            <div className="idea_card_tag_container">
-                    <div className="idea_tag">
-                        <p>Tag</p>
-                    </div>
-                    <div className="idea_tag">
-                        <p>Tag</p>
-                    </div>
-                    <div className="idea_tag">
-                        <p>Tag</p>
-                    </div>
+          <div className="idea_card_tag_container">
+            <div className="idea_tag">
+              <p>Tag</p>
             </div>
+            <div className="idea_tag">
+              <p>Tag</p>
+            </div>
+            <div className="idea_tag">
+              <p>Tag</p>
+            </div>
+          </div>
         </div>
       </div>
+      <div className="card_divider"></div>
     </>
   );
 };

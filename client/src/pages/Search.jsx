@@ -4,6 +4,7 @@ import Navbar from "../component/Navbar";
 import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
 import AppSearch from "../component/parts/AppSearch"
+import Stat from "../component/Stat";
 
 function Search() {
   return (
@@ -14,7 +15,9 @@ function Search() {
         <div className="main">
           <AppSearch />
         </div>
-        <div className="other"></div>
+        <div className="other">
+          <Stat/>
+        </div>
       </div>
       <AddIdea />
     </>

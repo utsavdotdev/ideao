@@ -4,6 +4,7 @@ import Navbar from "../component/Navbar";
 import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
 import AppExplore from "../component/parts/AppExplore"
+import Stat from "../component/Stat";
 
 function Explore() {
   return (
@@ -14,7 +15,9 @@ function Explore() {
         <div className="main">
           <AppExplore/>
         </div>
-        <div className="other"></div>
+        <div className="other">
+          <Stat/>
+        </div>
       </div>
       <AddIdea/>
 

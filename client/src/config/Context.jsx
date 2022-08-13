@@ -9,12 +9,17 @@ const Context = (props) => {
 
   //Post Modal state
   const [open,setOpen] = useState(false);
+
+  //Card Loading
+  const [load,setLoad] = useState(false);
+
   return (
     <>
       <ContextProvider.Provider
         value={{
           mdl: [modal, setModal],
-          opn: [open,setOpen]
+          opn: [open,setOpen],
+          ld:[load,setLoad]
         }}
       >
         {props.children}

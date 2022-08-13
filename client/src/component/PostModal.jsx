@@ -47,7 +47,9 @@ const PostModal = () => {
             handleAddition={handleAddition}
             inputFieldPosition="bottom"
             placeholder="Tags"
-            autocomplete
+            autofocus={false}
+            maxLength="10"
+            allowDragDrop={false}
           />
           <button className="post_btn">Post</button>
         </div>

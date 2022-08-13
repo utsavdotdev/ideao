@@ -4,6 +4,7 @@ import Navbar from "../component/Navbar";
 import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
 import AppHome from "../component/parts/AppHome";
+import Stat from "../component/Stat";
 
 function DashboardApp() {
   return (
@@ -14,7 +15,9 @@ function DashboardApp() {
         <div className="main">
           <AppHome/>
         </div>
-        <div className="other"></div>
+        <div className="other">
+          <Stat/>
+        </div>
       </div>
       <AddIdea/>
     </>
