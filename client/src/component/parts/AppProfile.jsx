@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
-import IdeaCard from "../IdeaCard";
+import React, { useContext } from "react";
 import { ContextProvider } from "../../config/Context";
+import "../../css/Profile.css";
+import IdeaCard from "../IdeaCard";
 import CardLoading from "../loading/CardLoading";
-import "../../css/SearchBar.css";
-import { BiSearchAlt } from "react-icons/bi";
-const AppSearch = () => {
-  const loading = [1, 2, 3];
+
+const AppProfile = () => {
+  const loading = [1, 2, 3, 4, 5];
   const card = [
     {
       idea_id: "asnmkjsy8eb7et37ewb7e37",
@@ -43,38 +43,31 @@ const AppSearch = () => {
   ];
   const { ld } = useContext(ContextProvider);
   const [load, setLoad] = ld;
-
-  const [search, setSearch] = useState("");
-  const handleInput = (e) => {
-    setSearch(e.target.value);
-  };
-  console.log(search);
   return (
     <>
-      <div className="search_container">
-        <input
-          className="search_input"
-          type="text"
-          placeholder="Search Ideas..."
-          onChange={handleInput}
-          name="srh"
-          value={search.srh}
-        />
-        <button className="searchbtn">
-          <BiSearchAlt size="25" />
-        </button>
-      </div>
-      {search ? (
-        loading.map((data, i) => <CardLoading key={i} />)
-      ) : (
-        <>
-          <div className="nosearch_wrapper">
-            <p className="nosearch_text">Start Searching . . . </p>
+      <div className="profile_con">
+        <div className="profile_wrapper">
+          <img
+            src="https://lh3.googleusercontent.com/-stWcQqcBZIQ/AAAAAAAAAAI/AAAAAAAAAAA/AHYzNgpIfU1ph3OVWPLlSQKrdKyolIxlUg/photo.jpg?sz=46"
+            className="profile_img"
+          />
+          <div className="profile_details">
+            <p>Utsav Bhattarai</p>
+            <p>stu@utsavbhattarai.info.np</p>
           </div>
-        </>
-      )}
+        </div>
+      </div>
+      <div className="myidea_con">
+        <div className="myidea_title">
+          <p>My Ideas</p>
+          <p>Total Idea : 3</p>
+        </div>
+      </div>
+      {load
+        ? loading.map((i) => <CardLoading key={i} />)
+        : card.map((data, i) => <IdeaCard key={i} data={data} />)}
     </>
   );
 };
 
-export default AppSearch;
+export default AppProfile;

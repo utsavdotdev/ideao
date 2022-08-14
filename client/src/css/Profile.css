@@ -1,0 +1,42 @@
+.profile_con{
+    display: flex;
+    flex-direction: column;
+}
+.profile_wrapper{
+    padding-inline: 12px;
+    padding-block: 20px;
+    display: flex;
+    /* border:1px solid red; */
+    gap:24px;
+    align-items: center;
+    border-bottom: 0.5px solid var(--border);
+}
+.profile_img{
+    outline: 2px solid var(--shine);
+    width:60px;
+    height: 60px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.profile_img:hover{
+    outline: 2px solid var(--light_primary);
+
+}
+.profile_details{
+    display: flex;
+    flex-direction: column;
+    gap:2px
+}
+.myidea_con{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+.myidea_title{
+    padding-inline: 12px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid var(--border);
+    padding-block: 12px;
+}

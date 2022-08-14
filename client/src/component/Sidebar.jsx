@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "../css/Sidebar.css";
 import { VscHome } from "react-icons/vsc";
 import { MdOutlineExplore } from "react-icons/md";
-import { AiOutlineBulb } from "react-icons/ai";
+import {AiOutlineUser} from "react-icons/ai"
 import { IoIosSearch } from "react-icons/io";
 import { FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 import {IoAddCircle} from "react-icons/io5"
@@ -41,9 +41,9 @@ function Sidebar() {
             </NavLink>
           </li>
           <li className="nav__item">
-            <NavLink to="/myidea" className="nav__link">
-              <AiOutlineBulb  className="nav__icon" />
-              <span className="nav__name">My Idea</span>
+            <NavLink to="/profile" className="nav__link">
+              <AiOutlineUser  className="nav__icon" />
+              <span className="nav__name">Profile</span>
             </NavLink>
           </li>
         </ul>

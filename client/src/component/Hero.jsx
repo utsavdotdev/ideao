@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
-import { BiSearchAlt } from "react-icons/bi";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../css/Hero.css";
-import SearchBar from "./SearchBar";
 
 function Hero() {
   return (
@@ -18,7 +17,16 @@ function Hero() {
               Ideao is the web platform for exploring and contributing the
               awesome ideas which helps developer to craft them.{" "}
             </p>
-            <SearchBar/>
+            <div className="hero_btn_con">
+              <Link to="/app">
+                <button className="hero_try">
+                  <p className="hero_btn_text">Try It now🚀</p>
+                </button>
+              </Link>
+              <button className="hero_github">
+                <p className="hero_btn_text">Github</p>
+              </button>
+            </div>
           </div>
         </div>
       </section>

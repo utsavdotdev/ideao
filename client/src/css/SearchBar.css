@@ -14,7 +14,7 @@
     border-top-left-radius: 100vw;
     border-bottom-left-radius: 100vw;
     font-size: 18px;
-    color:var(--gray);
+    color:var(--white);
     background-color:var(--bgcolor);
 }
 .search_input::placeholder{
@@ -39,4 +39,14 @@
 }
 .searchbtn:hover{
   background-color: var(--light_primary);
+}
+.nosearch_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    gap:2px
+}
+.nosearch_text{
+    font-size: 20px;
 }

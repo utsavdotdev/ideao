@@ -42,13 +42,24 @@ ul {
   text-align: center;
   margin-block: 8px;
 }
-.last_text{
-    font-size: 16px;
-    color: var(--dim_gray);
+.last_text {
+  font-size: 16px;
+  color: var(--dim_gray);
 }
-.top_text_con{
-    padding-bottom: 8px;
-    margin-inline: 14px;
-    margin-top: 10px;
-    border-bottom: 1px solid var(--border);
+.top_text_con {
+  margin-top: 10px;
+  margin-inline: 10px;
+  border: 1px solid var(--border);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width:75px;
+  border-radius: 100vw;
+  padding-left: 6px;
+  padding-block: 1px;
+  transition: 0.3s;
+}
+.top_text_con:hover{
+  background-color: var(--hover);
+  cursor: pointer;
 }

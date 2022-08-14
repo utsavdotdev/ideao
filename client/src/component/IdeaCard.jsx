@@ -1,37 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/IdeaCard.css";
-const IdeaCard = () => {
+import { MdDeleteOutline } from "react-icons/md";
+import { useLocation } from "react-router-dom";
+const IdeaCard = ({ data }) => {
+  const {
+    idea_id,
+    idea_postedBy,
+    idea_doc,
+    idea_title,
+    idea_des,
+    idea_tag,
+    idea_userImg,
+  } = data;
+  const [more, setMore] = useState(false);
+  const location = useLocation();
+  const path = location.pathname;
   return (
     <>
       <div className="idea_card_container">
         <div className="idea_card_name_container">
-          <img
-            src="https://lh3.googleusercontent.com/-stWcQqcBZIQ/AAAAAAAAAAI/AAAAAAAAAAA/AHYzNgpIfU1ph3OVWPLlSQKrdKyolIxlUg/photo.jpg?sz=46"
-            className="idea_card_pp_image"
-            alt="Profile pic"
-          />
-          <div className="idea_card_name_wrapper">
-            <p className="idea_card_name">Utsav Bhattarai</p>
-            <p className="idea_card_date">March 25,2022</p>
+          <div className="idea_card_name_cover">
+            <img
+              src={idea_userImg}
+              className="idea_card_pp_image"
+              alt="Profile pic"
+            />
+            <div className="idea_card_name_wrapper">
+              <p className="idea_card_name">{idea_postedBy}</p>
+              <p className="idea_card_date">{idea_doc}</p>
+            </div>
           </div>
+          {path === "/profile" && (
+            <div className="idea_card_dlt">
+              <MdDeleteOutline size={20} />
+            </div>
+          )}
         </div>
         <div className="idea_card_des_container">
-          <p className="idea_card_title">This is title</p>
+          <p className="idea_card_title">{idea_title}</p>
           <p className="idea_card_des">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-            asperiores placeat quas omnis, sint ad commodi . . .
+            {more ? (
+              <>
+                {idea_des}
+                <button onClick={() => setMore(!more)} className="more_less">
+                  Read Less
+                </button>
+              </>
+            ) : (
+              <>
+                {idea_des.substring(0, 100)}
+                <button onClick={() => setMore(!more)} className="more_less">
+                  Read More
+                </button>
+              </>
+            )}
           </p>
-
           <div className="idea_card_tag_container">
-            <div className="idea_tag">
-              <p>Tag</p>
-            </div>
-            <div className="idea_tag">
-              <p>Tag</p>
-            </div>
-            <div className="idea_tag">
-              <p>Tag</p>
-            </div>
+            {idea_tag.map((data, i) => (
+              <div className="idea_tag" key={i}>
+                <p>{data}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

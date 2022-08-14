@@ -3,8 +3,8 @@ import Sidebar from "../component/Sidebar";
 import Navbar from "../component/Navbar";
 import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
-import AppMyidea from "../component/parts/AppMyidea"
 import Stat from "../component/Stat";
+import AppProfile from "../component/parts/AppProfile";
 
 function Myidea() {
   return (
@@ -13,7 +13,7 @@ function Myidea() {
       <div className="layout">
         <Sidebar />
         <div className="main">
-           <AppMyidea/>
+           <AppProfile/>
         </div>
         <div className="other">
           <Stat/>

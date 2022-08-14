@@ -34,3 +34,38 @@
   font-size: clamp(17px,5vw,20px);
   line-height: 30px;
 }
+.hero_btn_con{
+  margin-block: 30px;
+  display: flex;
+  justify-content: center;
+  gap:16px
+}
+.hero_try{
+  width:135px;
+  height: 45px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary);
+  border-radius:3px;
+  transition: 0.3s;
+}
+.hero_try:hover{
+  background-color: var(--light_primary);
+}
+.hero_btn_text{
+  color: var(--white);
+  font-size: 16.5px;
+  font-weight: 500;
+}
+.hero_github{
+  width:100px;
+  height: 45px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--input);
+  border-radius:3px;
+  transition: 0.3s;
+}
+.hero_github:hover{
+  background-color: var(--shine);
+}

@@ -6,13 +6,20 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    gap:6px
 }
 .idea_card_name_container{
     display: flex;
     height: fit-content;
+    justify-content: space-between;
     align-items: center;
-    gap:12px ;
-
+    gap:12px ; 
+}
+.idea_card_name_cover{
+    align-items: center;
+    display: flex;
+    height: fit-content;
+    gap:14px ;
 }
 .idea_card_pp_image{
     width:35px;
@@ -70,4 +77,34 @@
     height: 0.5px;
     background-color: var(--dim_gray);
     opacity: 0.15;
+}
+.more_less{
+    outline: none;
+    height: 22px;
+    width: fit-content;
+    padding-inline:8px;
+    background-color: var(--bgcolor);
+    border: 1px solid var(--border);
+    color: var(--dark_white);
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 8px;
+   
+}
+.more_less:hover{
+    background-color: var(--shine);
+}
+.idea_card_dlt{
+    border-radius: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.idea_card_dlt:hover{
+    background-color: var(--shine);
 }
