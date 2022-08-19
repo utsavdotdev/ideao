@@ -35,13 +35,13 @@
     cursor: pointer;
 }
 .stat_data_con{
-    margin-block: 16px;
+    margin-block: 12px;
     border: 1px solid var(--border);
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     padding-inline: 24px;
-    padding-block: 4px;
+    padding-block: 12px;
 }
 .stat_data_wrapper{
     text-align: center;

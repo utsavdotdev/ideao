@@ -5,21 +5,24 @@ import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
 import Stat from "../component/Stat";
 import AppProfile from "../component/parts/AppProfile";
+import Page from "../component/Page";
 
 function Myidea() {
   return (
     <>
-      <Navbar />
-      <div className="layout">
-        <Sidebar />
-        <div className="main">
-           <AppProfile/>
+      <Page title="Profile">
+        <Navbar />
+        <div className="layout">
+          <Sidebar />
+          <div className="main">
+            <AppProfile />
+          </div>
+          <div className="other">
+            <Stat />
+          </div>
         </div>
-        <div className="other">
-          <Stat/>
-        </div>
-      </div>
-      <AddIdea />
+        <AddIdea />
+      </Page>
     </>
   );
 }

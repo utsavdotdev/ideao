@@ -3,23 +3,26 @@ import Sidebar from "../component/Sidebar";
 import Navbar from "../component/Navbar";
 import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
-import AppSearch from "../component/parts/AppSearch"
+import AppSearch from "../component/parts/AppSearch";
 import Stat from "../component/Stat";
+import Page from "../component/Page";
 
 function Search() {
   return (
     <>
-      <Navbar />
-      <div className="layout">
-        <Sidebar />
-        <div className="main">
-          <AppSearch />
+      <Page title="Search">
+        <Navbar />
+        <div className="layout">
+          <Sidebar />
+          <div className="main">
+            <AppSearch />
+          </div>
+          <div className="other">
+            <Stat />
+          </div>
         </div>
-        <div className="other">
-          <Stat/>
-        </div>
-      </div>
-      <AddIdea />
+        <AddIdea />
+      </Page>
     </>
   );
 }

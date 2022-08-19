@@ -5,21 +5,24 @@ import "../css/Layout.css";
 import AddIdea from "../component/AddIdea";
 import AppHome from "../component/parts/AppHome";
 import Stat from "../component/Stat";
+import Page from "../component/Page";
 
 function DashboardApp() {
   return (
     <>
-      <Navbar />
-      <div className="layout">
-        <Sidebar />
-        <div className="main">
-          <AppHome/>
+      <Page title="App">
+        <Navbar />
+        <div className="layout">
+          <Sidebar />
+          <div className="main">
+            <AppHome />
+          </div>
+          <div className="other">
+            <Stat />
+          </div>
         </div>
-        <div className="other">
-          <Stat/>
-        </div>
-      </div>
-      <AddIdea/>
+        <AddIdea />
+      </Page>
     </>
   );
 }

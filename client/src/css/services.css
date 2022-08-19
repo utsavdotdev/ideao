@@ -1,0 +1,81 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-block:16px;
+    margin-block: 20px;
+    padding-inline: 10px;
+}
+
+.container h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    padding-inline: 10px;
+    border-radius: 100%;
+    font-size: 25px;
+    background-color: var(--primary);
+    margin-bottom: 10px;
+    
+}
+
+.container .services{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container .services .card{
+    width: 330px;
+    text-align: center;
+    background: var(--sec);
+    padding: 30px 20px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .services .card:hover{
+    background: var(--primary);
+}
+
+.container .services .card .content{
+    transition: 0.3s;
+}
+.container .services .card:hover .content{
+    transform: scale(1.07);
+}
+.container .services .card:hover .icon{
+    background-color: var(--dark_white);
+    color: var(--primary);
+    font-size: 1.9rem;
+}
+
+
+.container .services .card:hover .content .title{
+    color: white;
+}
+
+.container .services .card .content .title{
+    padding: 5px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);
+    transition: 0.3s;
+}

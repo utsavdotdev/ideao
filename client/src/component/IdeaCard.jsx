@@ -41,7 +41,7 @@ const IdeaCard = ({ data }) => {
           <p className="idea_card_des">
             {more ? (
               <>
-                {idea_des}
+                {idea_des + " "}
                 <button onClick={() => setMore(!more)} className="more_less">
                   Read Less
                 </button>

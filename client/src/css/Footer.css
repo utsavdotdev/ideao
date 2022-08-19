@@ -2,9 +2,7 @@
     display: flex;
     background: var(--sec);
     width: 100%;
-    position: absolute;
     height: 60px;
-    bottom:0px;
     padding-block: 10px;
     padding-inline:20px;
     align-items: center;

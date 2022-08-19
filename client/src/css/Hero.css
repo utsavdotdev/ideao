@@ -1,17 +1,17 @@
 .hero_container {
-  height: 100%;
+  height: 80vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 .hero_wrapper {
+  margin-top: 15vh;
   display: flex;
   flex-direction: column;
   padding-inline: 30px;
 }
 .hero_top {
   text-align: center;
-  margin-top: 15vh;
   padding-inline: 10px;
 }
 .hero_heading {
@@ -35,18 +35,21 @@
   line-height: 30px;
 }
 .hero_btn_con{
-  margin-block: 30px;
+  margin-block: 40px;
   display: flex;
   justify-content: center;
-  gap:16px
+  gap:14px
 }
 .hero_try{
-  width:135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:150px;
   height: 45px;
   cursor: pointer;
   border: none;
   background-color: var(--primary);
-  border-radius:3px;
+  border-radius:5px;
   transition: 0.3s;
 }
 .hero_try:hover{
@@ -54,17 +57,21 @@
 }
 .hero_btn_text{
   color: var(--white);
-  font-size: 16.5px;
+  font-size: 17px;
   font-weight: 500;
+  font-family: "Poppins", sans-serif !important;
 }
 .hero_github{
-  width:100px;
+  width:120px;
   height: 45px;
   cursor: pointer;
   border: none;
   background-color: var(--input);
-  border-radius:3px;
+  border-radius:5px;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero_github:hover{
   background-color: var(--shine);

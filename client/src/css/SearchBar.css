@@ -44,8 +44,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex:1;
-    gap:2px
+    gap:2px;
+    height: 60vh;
 }
 .nosearch_text{
     font-size: 20px;

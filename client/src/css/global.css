@@ -63,3 +63,17 @@ ul {
   background-color: var(--hover);
   cursor: pointer;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  height:10px;
+}
+::-webkit-scrollbar-track{
+  background:var(--sec);
+  margin-left: 18px;
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb{
+  background: var(--input);
+  border-radius: 100vw;
+  border: 2px solid var(--sec);
+}
