@@ -14,7 +14,6 @@
   height: auto;
   border-radius: 10px;
   flex-direction: column;
-  /* border:1px solid red */
 }
 .other {
   flex: 1.4;
@@ -23,7 +22,6 @@
   position: sticky;
   border-radius: 10px;
   top: 80px;
-  /* border:1px solid blue */
 }
 @media screen and (max-width: 872px) {
   .other {

@@ -6,12 +6,30 @@ import { Link } from "react-router-dom";
 import LoginModal from "./LoginModal";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoLogOutOutline } from "react-icons/io5";
+import Cookies from "js-cookie";
+import {toast} from "react-toastify"
 function Navbar() {
-  const { mdl } = useContext(ContextProvider);
+  const { mdl,usr } = useContext(ContextProvider);
   const [modal, setModal] = mdl;
-  const menuToggle = () =>{
-    const toggleMenu = document.querySelector('.menu')
-    toggleMenu.classList.toggle('active')
+  const [user,setUser] = usr
+  const token = Cookies.get("token")
+  const menuToggle = () => {
+    const toggleMenu = document.querySelector(".menu");
+    toggleMenu.classList.toggle("active");
+  };
+  const signOut = () =>{
+    Cookies.remove("token")
+    setUser(null)
+    toast.success("Successfully SignOut", {
+      position: "bottom-left",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    window.location.reload();
   }
   return (
     <>
@@ -26,29 +44,35 @@ function Navbar() {
           </Link>
         </div>
         <div className="right">
-          {/* <button className="btn" onClick={() => setModal(!modal)}>
-            <p className="login">Login</p>
-          </button> */}
-          <div className="login_avatar_wrapper">
-            <img
-              src="https://lh3.googleusercontent.com/-stWcQqcBZIQ/AAAAAAAAAAI/AAAAAAAAAAA/AHYzNgpIfU1ph3OVWPLlSQKrdKyolIxlUg/photo.jpg?sz=46"
-              alt="avatar"
-              className="login_avatar"
-              onClick={menuToggle}
-            />
-            <div className="menu">
-              <ul>
-                <li>
-                  <AiOutlineUser className="navbar_link" />
-                  <Link to="/profile" className="navbar_a">My Profile</Link>
-                </li>
-                <li>
-                  <IoLogOutOutline className="navbar_link" />
-                  <p className="navbar_a">Sign Out</p>
-                </li>
-              </ul>
+          {token ? (
+            <div className="login_avatar_wrapper">
+              <img
+                src={user[0]?.user_pic}
+                alt="avatar"
+                className="login_avatar"
+                onClick={menuToggle}
+                loading="lazy"
+              />
+              <div className="menu">
+                <ul>
+                  <li>
+                    <AiOutlineUser className="navbar_link" />
+                    <Link to="/profile" className="navbar_a">
+                      My Profile
+                    </Link>
+                  </li>
+                  <li >
+                    <IoLogOutOutline className="navbar_link"/>
+                    <p className="navbar_a" onClick={() =>signOut()}>Sign Out</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+          ) : (
+            <button className="btn" onClick={() => setModal(!modal)}>
+              <p className="login">Login</p>
+            </button>
+          )}
         </div>
       </div>
     </>

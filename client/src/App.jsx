@@ -6,9 +6,12 @@ import Explore from "./pages/Explore";
 import Search from "./pages/Search";
 import Profile from "./pages/Profile";
 import "./css/global.css";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <>
+      <ToastContainer/>
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/app" element={<DashboardApp />} />

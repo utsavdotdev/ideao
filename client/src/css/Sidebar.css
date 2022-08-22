@@ -6,14 +6,14 @@
   border-radius: 10px;
   left: 0;
   z-index: 10;
-  top:80px
+  top:80px;
 }
 .sidebar .nav__list {
   margin-top: 8px;
 }
 .active {
   color: var(--light_primary) !important;
-  /* border-right: 1.5px solid var(--light_primary); */
+  border-right: 1.5px solid var(--light_primary);
 }
 .sidebar .nav__list .nav__link {
   align-items: center;
@@ -93,12 +93,10 @@
 }
 
 /* Responsive */
-
 @media screen and (max-width: 872px) {
   .sidebar {
     position: fixed;
-    top:90%;
-    bottom: 0 !important;
+    top:91vh;
     left: 0;
     background-color: var(--sec);
     width: 100%;
@@ -134,6 +132,7 @@
   }
   .active {
     color: var(--light_primary) !important;
+    border:0
   }
   .nav__icon {
     font-size: 1.4rem;

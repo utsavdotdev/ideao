@@ -31,7 +31,7 @@
 .myidea_con{
     display: flex;
     flex-direction: column;
-    flex:1;
+    /* flex:1; */
 }
 .myidea_title{
     padding-inline: 12px;
@@ -39,4 +39,12 @@
     justify-content: space-between;
     border-bottom: 0.5px solid var(--border);
     padding-block: 12px;
+}
+.myidea_noIdea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    font-size: 18px;
+    font-weight: 400;
 }

@@ -58,6 +58,7 @@
     outline: 1.5px solid var(--border);
     cursor: pointer;
     transition: 0.3s;
+    background-color: var(--sec);
 }
 .login_avatar:hover{
     outline: 1.5px solid var(--primary);

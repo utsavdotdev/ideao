@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "../css/IdeaCard.css";
 import { MdDeleteOutline } from "react-icons/md";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 const IdeaCard = ({ data }) => {
   const {
-    idea_id,
+    id,
     idea_postedBy,
     idea_doc,
     idea_title,
@@ -15,6 +17,33 @@ const IdeaCard = ({ data }) => {
   const [more, setMore] = useState(false);
   const location = useLocation();
   const path = location.pathname;
+  const url = import.meta.env.VITE_API_URL;
+  const deleteIdea = async () => {
+    const dltRes = await axios.delete(`${url}/api/idea/${id}`);
+    if(dltRes.status === 201)
+    {
+      toast.success("Successfully Deleted the Idea", {
+        position: "bottom-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    if(dltRes.status === 400){
+      toast.error("Something went wrong", {
+        position: "bottom-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }
   return (
     <>
       <div className="idea_card_container">
@@ -31,7 +60,7 @@ const IdeaCard = ({ data }) => {
             </div>
           </div>
           {path === "/profile" && (
-            <div className="idea_card_dlt">
+            <div className="idea_card_dlt" onClick={deleteIdea}>
               <MdDeleteOutline size={20} />
             </div>
           )}
