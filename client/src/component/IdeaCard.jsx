@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../css/IdeaCard.css";
 import { MdDeleteOutline } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { ContextProvider } from "../config/Context";
 const IdeaCard = ({ data }) => {
+  const { myid } = useContext(ContextProvider);
+  const [myIdea, setMyIdea] = myid;
   const {
     id,
     idea_postedBy,
@@ -18,32 +21,23 @@ const IdeaCard = ({ data }) => {
   const location = useLocation();
   const path = location.pathname;
   const url = import.meta.env.VITE_API_URL;
+
   const deleteIdea = async () => {
     const dltRes = await axios.delete(`${url}/api/idea/${id}`);
-    if(dltRes.status === 201)
-    {
-      toast.success("Successfully Deleted the Idea", {
-        position: "bottom-left",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
+    const newId = id;
+    if (dltRes.status === 201) {
+      toast.success("Successfully Deleted the Idea");
+      setMyIdea((prev) => {
+        return prev.filter((data) => {
+          return data.id != newId;
+        });
       });
     }
-    if(dltRes.status === 400){
-      toast.error("Something went wrong", {
-        position: "bottom-left",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+    if (dltRes.status === 400) {
+      toast.error("Something went wrong");
     }
-  }
+  };
+  console.log(myIdea);
   return (
     <>
       <div className="idea_card_container">
@@ -60,7 +54,7 @@ const IdeaCard = ({ data }) => {
             </div>
           </div>
           {path === "/profile" && (
-            <div className="idea_card_dlt" onClick={deleteIdea}>
+            <div className="idea_card_dlt" onClick={() => deleteIdea()}>
               <MdDeleteOutline size={20} />
             </div>
           )}
@@ -77,20 +71,22 @@ const IdeaCard = ({ data }) => {
               </>
             ) : (
               <>
-                {idea_des.substring(0, 100)}
+                {idea_des?.substring(0, 100)}
                 <button onClick={() => setMore(!more)} className="more_less">
                   Read More
                 </button>
               </>
             )}
           </p>
-          <div className="idea_card_tag_container">
-            {idea_tag.map((data, i) => (
-              <div className="idea_tag" key={i}>
-                <p>{data}</p>
-              </div>
-            ))}
-          </div>
+          {idea_tag.length === 0 ? null : (
+            <div className="idea_card_tag_container">
+              {idea_tag?.map((data, i) => (
+                <div className="idea_tag" key={i}>
+                  <p>{data}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <div className="card_divider"></div>

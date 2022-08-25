@@ -40,13 +40,13 @@
 .searchbtn:hover{
   background-color: var(--light_primary);
 }
-.nosearch_wrapper{
+.search_wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     gap:2px;
     height: 60vh;
 }
-.nosearch_text{
+.search_text{
     font-size: 20px;
 }

@@ -10,6 +10,7 @@ import { gapi } from "gapi-script";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import moment from "moment";
 
 function LoginModal() {
   const navigate = useNavigate();
@@ -24,9 +25,8 @@ function LoginModal() {
     }
     gapi.load("client:auth2", start);
   }, []);
-  const { mdl,usr } = useContext(ContextProvider);
+  const { mdl } = useContext(ContextProvider);
   const [modal, setModal] = mdl;
-  const [user, setUser] = usr;
   const onSuccess = async (res) => {
     setModal(!modal);
     const { profileObj } = res;
@@ -36,7 +36,7 @@ function LoginModal() {
         user_gid: profileObj?.googleId,
         user_name: profileObj?.name,
         user_email: profileObj?.email,
-        user_doc: "",
+        user_doc: moment().format("ll"),
         user_pic: profileObj?.imageUrl,
       },
       {
@@ -47,54 +47,18 @@ function LoginModal() {
     );
     if (userRes.data.msg === "LogIn") {
       Cookies.set("token", userRes.data.token, { expires: 7 });
-      toast.success("Successfully LogIn", {
-        position: "bottom-left",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-     setUser([{
-      user_gid: profileObj?.googleId,
-        user_name: profileObj?.name,
-        user_email: profileObj?.email,
-        user_doc: "",
-        user_pic: profileObj?.imageUrl,
-     }])
+      toast.success("Successfully LogIn");
+      window.location.reload();
       navigate("/app", { replace: true });
     } else {
       Cookies.set("token", userRes.data.token, { expires: 7 });
-      toast.success("Successfully SignIn", {
-        position: "bottom-left",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      setUser([{
-        user_gid: profileObj?.googleId,
-          user_name: profileObj?.name,
-          user_email: profileObj?.email,
-          user_doc: "",
-          user_pic: profileObj?.imageUrl,
-       }])
+      toast.success("Successfully SignIn");
+      window.location.reload();
       navigate("/app", { replace: true });
     }
   };
   const onFailure = (err) => {
-    toast.error("Something Wrong", {
-      position: "bottom-left",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error("Something Wrong");
   };
   const { signIn } = useGoogleLogin({
     onSuccess,

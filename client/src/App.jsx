@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <>
-      <ToastContainer/>
+      <ToastContainer autoClose={1000} position="bottom-left"/>
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/app" element={<DashboardApp />} />

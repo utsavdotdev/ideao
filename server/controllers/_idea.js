@@ -4,7 +4,7 @@ import { ideaRepository } from "../schema/idea.schema.js";
 export const getAllIdea = async (req, res) => {
   try {
     const allIdea = await ideaRepository.search().returnAll();
-    res.status(201).send(allIdea);
+    res.status(200).send(allIdea);
   } catch (error) {
     console.log(error);
     res.status(400).send(error);
@@ -16,7 +16,7 @@ export const postIdea = async (req, res) => {
   try {
     const idea = ideaRepository.createEntity(req.body);
     idea.id = await ideaRepository.save(idea);
-    res.status(201).send(idea);
+    res.status(201).send({ msg: "Posted✅" });
   } catch (error) {
     console.log(error);
     res.status(404).send(error);
@@ -35,7 +35,7 @@ export const getMyIdea = async (req, res) => {
     if (userIdea.length != 0) {
       res.status(201).send(userIdea);
     } else {
-      res.status(202).send();
+      res.status(204).send();
     }
   } catch (error) {
     res.status(400).send(error);
@@ -68,9 +68,9 @@ export const searchIdea = async (req, res) => {
       .match(search)
       .return.all();
     if (srhResult.length == 0) {
-      return res.status(404).send({ msg: "Search not found" });
+      return res.status(204).send();
     }
-    res.status(201).send(srhResult);
+    res.status(200).send(srhResult);
   } catch (error) {
     res.status(400).send(error);
   }

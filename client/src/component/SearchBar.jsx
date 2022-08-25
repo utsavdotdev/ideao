@@ -9,7 +9,8 @@ const SearchBar = () => {
         className="search_input"
         type="text"
         placeholder="Search Ideas..."
-      />
+        autocomplete="off"
+        />
       <button className="searchbtn">
         <BiSearchAlt size="25" />
       </button>
