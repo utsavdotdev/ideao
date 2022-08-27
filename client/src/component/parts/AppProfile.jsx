@@ -24,7 +24,7 @@ const AppProfile = () => {
   }
 
   const url = import.meta.env.VITE_API_URL;
-  const userId = user[0]?.id;
+  const userId = user[0]?.user_gid;
 
   //Fetching user idea
   useEffect(() => {
@@ -36,7 +36,7 @@ const AppProfile = () => {
   const fetchMyIdea = async () => {
     const res = await axios.get(`${url}/api/idea/${userId}`);
     setLoad(!load);
-    if (res.status === 201) {
+    if (res.status === 200) {
       console.log(res.data);
       setMyIdea(res.data);
     }

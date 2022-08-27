@@ -25,6 +25,7 @@ const AppSearch = () => {
     if (res.status === 204) {
       toast.info("Nop, Idea doesn't found😥")
       setloading(false);
+      setSearch("")
     }
   };
   useEffect(() => {
@@ -52,7 +53,7 @@ const AppSearch = () => {
       {loading ? (
         load.map((i) => <CardLoading key={i} />)
       ) : result.length !== 0 ? (
-        result.map((data, i) => <IdeaCard key={i} data={data} />)
+        result.map((data, i) => <IdeaCard key={i} data={data} search={search}/>)
       ) : (
         <div className="search_wrapper">
           <p className="search_text">

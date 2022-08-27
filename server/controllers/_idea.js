@@ -1,4 +1,5 @@
 import { ideaRepository } from "../schema/idea.schema.js";
+import { userRepository } from "../schema/user.schema.js";
 
 //Getting all idea
 export const getAllIdea = async (req, res) => {
@@ -16,7 +17,7 @@ export const postIdea = async (req, res) => {
   try {
     const idea = ideaRepository.createEntity(req.body);
     idea.id = await ideaRepository.save(idea);
-    res.status(201).send({ msg: "Posted✅" });
+    res.status(200).send({ msg: "Posted✅" });
   } catch (error) {
     console.log(error);
     res.status(404).send(error);
@@ -33,7 +34,7 @@ export const getMyIdea = async (req, res) => {
       .eq(userId)
       .return.all();
     if (userIdea.length != 0) {
-      res.status(201).send(userIdea);
+      res.status(200).send(userIdea);
     } else {
       res.status(204).send();
     }
@@ -46,7 +47,7 @@ export const getMyIdea = async (req, res) => {
 export const deleteIdea = async (req, res) => {
   try {
     await ideaRepository.remove(req.params.idea_id);
-    res.status(201).send("Deleted");
+    res.status(200).send("Deleted");
   } catch (error) {
     res.status(400).send(error);
   }
@@ -63,7 +64,7 @@ export const searchIdea = async (req, res) => {
       .or("idea_tag")
       .contains(search)
       .or("idea_des")
-      .match(search)
+      .matches(search)
       .or("idea_doc")
       .match(search)
       .return.all();

@@ -29,15 +29,7 @@ const PostModal = () => {
   const { idea_title, idea_des } = idea;
   const token = Cookies.get("token");
   if (!token) {
-    toast.info("Login to post the Idea", {
-      position: "bottom-left",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.info("Login to post the Idea");
     return setOpen(!open);
   }
   const handleChange = (e) => {
@@ -76,7 +68,7 @@ const PostModal = () => {
         idea_title: idea_title,
         idea_des: idea_des,
         idea_doc: moment().format("ll"),
-        user_id: user[0]?.id,
+        user_id: user[0]?.user_gid,
         idea_userImg: user[0]?.user_pic,
         idea_postedBy: user[0]?.user_name,
         idea_tag: finalTag,

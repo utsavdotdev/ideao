@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import IdeaCard from "../IdeaCard";
 import CardLoading from "../loading/CardLoading";
-import { useState } from "react";
-import axios from "axios";
 import { ContextProvider } from "../../config/Context";
 
 const AppHome = () => {
@@ -18,7 +16,7 @@ const AppHome = () => {
       {isloading
         ? loading.map((i) => <CardLoading key={i} />)
         : allIdea.length !== 0
-        ? // myIdea.map((data, i) => <IdeaCard key={i} data={data} />)
+        ? 
           allIdea
             .sort(() => Math.random() - 0.5)
             .map((data, i) => <IdeaCard key={i} data={data} />)

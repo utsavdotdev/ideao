@@ -5,6 +5,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import Idea from "./routes/Idea.js";
 import User from "./routes/User.js";
+import Stat from "./routes/Stat.js";
 //Making Instances
 const app = express();
 
@@ -20,6 +21,7 @@ app.get("/api/", (req, res) => {
 //Routes
 app.use("/api/idea", Idea);
 app.use("/api/user", User);
+app.use("/api/stat", Stat)
 
 //Listening to the port
 const PORT = process.env.PORT || 3001;

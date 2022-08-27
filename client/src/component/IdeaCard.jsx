@@ -5,7 +5,8 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { ContextProvider } from "../config/Context";
-const IdeaCard = ({ data }) => {
+import Highlight from "react-highlighter";
+const IdeaCard = ({ data, search }) => {
   const { myid } = useContext(ContextProvider);
   const [myIdea, setMyIdea] = myid;
   const {
@@ -25,7 +26,7 @@ const IdeaCard = ({ data }) => {
   const deleteIdea = async () => {
     const dltRes = await axios.delete(`${url}/api/idea/${id}`);
     const newId = id;
-    if (dltRes.status === 201) {
+    if (dltRes.status === 200) {
       toast.success("Successfully Deleted the Idea");
       setMyIdea((prev) => {
         return prev.filter((data) => {
@@ -37,7 +38,7 @@ const IdeaCard = ({ data }) => {
       toast.error("Something went wrong");
     }
   };
-  console.log(myIdea);
+ 
   return (
     <>
       <div className="idea_card_container">
@@ -60,7 +61,19 @@ const IdeaCard = ({ data }) => {
           )}
         </div>
         <div className="idea_card_des_container">
-          <p className="idea_card_title">{idea_title}</p>
+          <Highlight
+            search={search}
+            matchStyle={{
+              color: "#fff",
+              fontWeight: 600,
+              background: "#3a474b",
+              paddingInline: "2px",
+              borderRadius: "4px",
+            }}
+            className="idea_card_title"
+          >
+            {idea_title}
+          </Highlight>
           <p className="idea_card_des">
             {more ? (
               <>

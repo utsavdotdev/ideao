@@ -1,112 +1,110 @@
-.idea_card_container{
-    width: 100%;
-    height: fit-content;
-    padding-block: 18px;
-    padding-inline: 13px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap:6px;
+.idea_card_container {
+  width: 100%;
+  height: fit-content;
+  padding-block: 18px;
+  padding-inline: 13px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
 }
-.idea_card_name_container{
-    display: flex;
-    height: fit-content;
-    justify-content: space-between;
-    align-items: center;
-    gap:12px ; 
+.idea_card_name_container {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 }
-.idea_card_name_cover{
-    align-items: center;
-    display: flex;
-    height: fit-content;
-    gap:14px ;
+.idea_card_name_cover {
+  align-items: center;
+  display: flex;
+  height: fit-content;
+  gap: 14px;
 }
-.idea_card_pp_image{
-    width:35px;
-    height:35px;
-    border-radius: 100%;
-    outline: 1.5px solid var(--shine);
+.idea_card_pp_image {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  outline: 1.5px solid var(--shine);
 }
-.idea_card_name_wrapper{
-    display:flex;
-    flex-direction: column;
+.idea_card_name_wrapper {
+  display: flex;
+  flex-direction: column;
 }
-.idea_card_name{
-    font-size: 16px;
+.idea_card_name {
+  font-size: 16px;
 }
-.idea_card_date{
-    font-size:14px;
-    color: var(--dim_gray);
+.idea_card_date {
+  font-size: 14px;
+  color: var(--dim_gray);
 }
-.idea_card_des_container{
-    margin-left: 4px;
-    margin-top: 8px;
-    display: flex;
-    flex-direction: column;
-    gap:4px;
-    flex:1;
-    word-break: break-all;
+.idea_card_des_container {
+  margin-left: 4px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  word-break:break-all;
 }
-.idea_card_title{
-       font-size:22px;
-       color:var(--white);
-       font-weight: 600; 
+.idea_card_title {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
 }
-.idea_card_des{
-    font-size: 15px;
-    color: var(--dim_gray);
+.idea_card_des {
+  font-size: 15px;
+  color: var(--dim_gray);
 }
-.idea_card_tag_container{
-    margin-top: 8px;
-    display: flex;
-    gap:8px;
+.idea_card_tag_container {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
 }
-.idea_tag{
-    padding-block: 3px;
-    padding-inline: 6px;
-    border-radius: 5px;
-    border: 0.2px solid var(--gray);
-    font-size: 13px;
-    color: var(--dim_gray);
-    transition: 0.2s;
+.idea_tag {
+  padding-block: 3px;
+  padding-inline: 6px;
+  border-radius: 5px;
+  border: 0.2px solid var(--gray);
+  font-size: 13px;
+  color: var(--dim_gray);
+  transition: 0.2s;
 }
-.idea_tag:hover{
-    color: var(--white);
-    border: 0.2px solid var(--white);
+.idea_tag:hover {
+  color: var(--white);
+  border: 0.2px solid var(--white);
 }
-.card_divider{
-    width: 100%;
-    height: 0.5px;
-    background-color: var(--dim_gray);
-    opacity: 0.15;
+.card_divider {
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--dim_gray);
+  opacity: 0.15;
 }
-.more_less{
-    outline: none;
-    height: 22px;
-    width: fit-content;
-    padding-inline:8px;
-    background-color: var(--bgcolor);
-    border: 1px solid var(--border);
-    color: var(--dark_white);
-    font-size: 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-left:3px
-   
+.more_less {
+  outline: none;
+  height: 22px;
+  width: fit-content;
+  padding-inline: 8px;
+  background-color: var(--bgcolor);
+  border: 1px solid var(--border);
+  color: var(--dark_white);
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 3px;
 }
-.more_less:hover{
-    background-color: var(--shine);
+.more_less:hover {
+  background-color: var(--shine);
 }
-.idea_card_dlt{
-    border-radius: 100%;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s;
+.idea_card_dlt {
+  border-radius: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.idea_card_dlt:hover{
-    background-color: var(--shine);
+.idea_card_dlt:hover {
+  background-color: var(--shine);
 }

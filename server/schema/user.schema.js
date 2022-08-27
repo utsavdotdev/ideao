@@ -17,8 +17,8 @@ class User extends Entity {
 const userSchema = new Schema(
   User,
   {
-    user_gid:{
-      type:"string"
+    user_gid: {
+      type: "string",
     },
     user_name: {
       type: "string",

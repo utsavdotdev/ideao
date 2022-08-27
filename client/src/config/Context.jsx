@@ -22,6 +22,16 @@ const Context = (props) => {
 
   //all idea
   const [allIdea, setallIdea] = useState([]);
+
+  //stat
+  const [stat, setStat] = useState();
+
+  //topIdean
+  const [top,setTop] = useState();
+
+   const url = import.meta.env.VITE_API_URL;
+   const token = Cookies.get("token");
+
   useEffect(() => {
     const fetchPost = async () => {
       const res = await axios.get(`${url}/api/idea`);
@@ -33,8 +43,30 @@ const Context = (props) => {
     fetchPost();
   }, []);
 
-  const url = import.meta.env.VITE_API_URL;
-  const token = Cookies.get("token");
+  useEffect(() => {
+    const getStat = async () => {
+      try {
+        const res = await axios.get(`${url}/api/stat`);
+        setStat(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getStat();
+  }, []);
+
+  useEffect(() => {
+   const getTop = async () =>{
+    try {
+      const res = await axios.get(`${url}/api/stat/top`)
+      setTop(res.data)
+    } catch (error) {
+      console.log(error);
+    }
+   }
+   getTop();
+  }, [])
+    
   useEffect(() => {
     const fetchUser = async () => {
       const userData = await axios.get(`${url}/api/user/${token}`);
@@ -55,6 +87,8 @@ const Context = (props) => {
           usr: [user, setUser],
           myid: [myIdea, setMyIdea],
           allid: [allIdea, setallIdea],
+          st:[stat,setStat],
+          tp:[top,setTop]
         }}
       >
         {props.children}
