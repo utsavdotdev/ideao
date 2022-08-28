@@ -4,7 +4,6 @@ import CardLoading from "../loading/CardLoading";
 import { ContextProvider } from "../../config/Context";
 
 const AppHome = () => {
-  const url = import.meta.env.VITE_API_URL;
   const { allid, ld } = useContext(ContextProvider);
 
   const [allIdea, setallIdea] = allid;

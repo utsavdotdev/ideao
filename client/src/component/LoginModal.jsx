@@ -14,8 +14,9 @@ import moment from "moment";
 
 function LoginModal() {
   const navigate = useNavigate();
-  const clientId = import.meta.env.VITE_CLIENT_ID;
-  const url = import.meta.env.VITE_API_URL;
+  const clientId =
+    "433390605808-uqpnatsvkgkp9sefirjppubt0if7h6n0.apps.googleusercontent.com";
+  const url = "https://ideao-backend.herokuapp.com";
   useEffect(() => {
     function start() {
       gapi.client.init({

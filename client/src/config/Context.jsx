@@ -29,7 +29,7 @@ const Context = (props) => {
   //topIdean
   const [top,setTop] = useState();
 
-   const url = import.meta.env.VITE_API_URL;
+   const url = "https://ideao-backend.herokuapp.com";
    const token = Cookies.get("token");
 
   useEffect(() => {

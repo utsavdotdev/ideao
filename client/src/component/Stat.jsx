@@ -7,7 +7,6 @@ const Stat = () => {
   const { st, tp } = useContext(ContextProvider);
   const [stat, setStat] = st;
   const [top, setTop] = tp;
-  const url = import.meta.env.VITE_API_URL;
   return (
     <>
       <div className="stat_con">
