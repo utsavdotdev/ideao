@@ -1,3 +1,4 @@
+import path from "path";
 import react from "@vitejs/plugin-react";
 
 const viteEnv = {};
@@ -8,6 +9,7 @@ Object.keys(process.env).forEach((key) => {
 });
 
 export default {
+  alias: { "@": require("path").resolve(__dirname, "src") },
   define: viteEnv,
   plugins: [react()],
 };
