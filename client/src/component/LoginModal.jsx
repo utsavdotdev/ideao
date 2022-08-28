@@ -50,12 +50,12 @@ function LoginModal() {
       Cookies.set("token", userRes.data.token, { expires: 7 });
       toast.success("Successfully LogIn");
       window.location.reload();
-      navigate("/app", { replace: true });
+      navigate("/app");
     } else {
       Cookies.set("token", userRes.data.token, { expires: 7 });
       toast.success("Successfully SignIn");
       window.location.reload();
-      navigate("/app", { replace: true });
+      navigate("/app");
     }
   };
   const onFailure = (err) => {
