@@ -20,15 +20,7 @@ function Navbar() {
   const signOut = () =>{
     Cookies.remove("token")
     setUser(null)
-    toast.success("Successfully SignOut", {
-      position: "bottom-left",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.success("Successfully SignOut");
     window.location.reload();
   }
   return (
@@ -48,10 +40,9 @@ function Navbar() {
             <div className="login_avatar_wrapper">
               <img
                 src={user[0]?.user_pic}
-                alt="avatar"
+                alt="pic"
                 className="login_avatar"
                 onClick={menuToggle}
-                loading="lazy"
               />
               <div className="menu">
                 <ul>
