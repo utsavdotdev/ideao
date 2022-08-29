@@ -51,7 +51,7 @@ const PostModal = () => {
     setTags([...tags, tag]);
   };
 
-  const url = "https://ideao-backend.herokuapp.com";
+   const url = import.meta.env.VITE_API_URL;
   const sendIdea = async () => {
     if(idea_title === "" || idea_des == "")
     {

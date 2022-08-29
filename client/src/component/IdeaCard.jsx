@@ -21,7 +21,7 @@ const IdeaCard = ({ data, search }) => {
   const [more, setMore] = useState(false);
   const location = useLocation();
   const path = location.pathname;
-   const url = "https://ideao-backend.herokuapp.com";
+   const url = import.meta.env.VITE_API_URL;
 
   const deleteIdea = async () => {
     const dltRes = await axios.delete(`${url}/api/idea/${id}`);

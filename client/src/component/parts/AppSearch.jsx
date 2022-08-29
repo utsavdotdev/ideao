@@ -13,7 +13,7 @@ const AppSearch = () => {
   const handleInput = (e) => {
     setSearch(e.target.value);
   };
-  const url = "https://ideao-backend.herokuapp.com";
+   const url = import.meta.env.VITE_API_URL;
 
   const onSearch = async () => {
     setloading(true);

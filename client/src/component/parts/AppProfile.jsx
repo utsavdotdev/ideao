@@ -23,7 +23,7 @@ const AppProfile = () => {
     return <Navigate to="/app" />;
   }
 
-  const url = "https://ideao-backend.herokuapp.com";
+   const url = import.meta.env.VITE_API_URL;
   const userId = user[0]?.user_gid;
 
   //Fetching user idea
