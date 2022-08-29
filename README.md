@@ -23,6 +23,12 @@ Ideao is a web platform of exploring, sharing the creativeness in the form of id
 
 ### Local installation
 
+# Move to local branch
+```
+# Move to local branch
+git checkout local
+```
+
 Go to `/server` folder (`cd ./server`) and then:
 
 ```

@@ -23,9 +23,14 @@ function Hero() {
                   <p className="hero_btn_text">Try It now🚀</p>
                 </button>
               </Link>
-              <button className="hero_github">
-                <p className="hero_btn_text">Github</p>
-              </button>
+              <a
+                href="https://github.com/utsavbhattarai007/ideao"
+                target={"_blank"}
+              >
+                <button className="hero_github">
+                  <p className="hero_btn_text">Github</p>
+                </button>
+              </a>
             </div>
           </div>
         </div>
