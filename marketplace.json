@@ -1,0 +1,22 @@
+{
+  "app_name": "Idea", 
+  "description": "Idea is a web portal of exploring ideas", 
+  "hidden": false,
+  "rank": 57, 
+  "type": "Full App",
+  "contributed_by": "Community",
+  "repo_url": "https://github.com/utsavbhattarai007/ideao",
+  "download_url": "https://github.com/utsavbhattarai007/ideao/archive/refs/heads/master.zip", 
+  "hosted_url": "https://ideao.netlify.app/", 
+  "quick_deploy": false,
+  "deploy_buttons": [], 
+  "language": ["JavaScript"],
+  "redis_commands": [".search",".createEntity",".remove",".save"], 
+  "redis_features": ["Json","Search"],
+  "redis_modules": ["RediJSON","RediSearch"],
+  "app_image_urls": [], 
+  "youtube_url": "",
+  "special_tags": ["Hackathon"], 
+  "verticals": ["Education"], 
+  "markdown": "https://raw.githubusercontent.com/utsavbhattarai007/ideao/master/README.md"
+}
