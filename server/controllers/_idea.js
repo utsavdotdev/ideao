@@ -1,5 +1,4 @@
 import { ideaRepository } from "../schema/idea.schema.js";
-import { userRepository } from "../schema/user.schema.js";
 
 //Getting all idea
 export const getAllIdea = async (req, res) => {

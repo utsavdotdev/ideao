@@ -2,7 +2,6 @@
 import express from "express";
 import {} from "dotenv/config";
 import cors from "cors";
-import bodyParser from "body-parser";
 import Idea from "./routes/Idea.js";
 import User from "./routes/User.js";
 import Stat from "./routes/Stat.js";
@@ -14,7 +13,7 @@ app.use(express.json()); // For JSON data
 app.use(cors("*")); // For incoming request
 
 //Api Endpoint
-app.get("/api/", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ msg: "Success✅" });
 });
 

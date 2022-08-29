@@ -13,7 +13,7 @@ const KeyCodes = {
   comma: 188,
   enter: 13,
 };
-  
+
 const delimiters = [KeyCodes.comma, KeyCodes.enter];
 
 const PostModal = () => {
@@ -53,15 +53,13 @@ const PostModal = () => {
 
   const url = "https://ideao-backend.herokuapp.com";
   const sendIdea = async () => {
-    if(idea_title === "" || idea_des == "")
-    {
+    if (idea_title === "" || idea_des == "") {
       return toast.info("Field cannot be empty");
     }
-    if(idea_des.length < 50)
-    {
+    if (idea_des.length < 50) {
       return toast.info("Description must be long");
     }
-    setLoad(true)
+    setLoad(true);
     const res = await axios.post(
       `${url}/api/idea`,
       {
@@ -93,9 +91,10 @@ const PostModal = () => {
         idea_title: "",
         idea_des: "",
       });
-      setLoad(false)
+      setLoad(false);
       setTags([]);
       setOpen(!open);
+      window.location.reload();
     }
   };
 
