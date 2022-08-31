@@ -126,10 +126,7 @@ Package like:
 - moment (used date and time)
 
 Note: ```url``` is the backend server url where backend is hosted
-### Performance Benchmarks
 
-
-## How to run it locally?
 ### Prerequisites
 - Node - v16.13.0
 - npm - v8.4.1
