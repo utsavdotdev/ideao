@@ -3,7 +3,7 @@
 Ideao is a web platform of exploring, sharing the creativeness in the form of idea. It allows to search the idea which helps you to make awesome things.
 
 # Overview video
-[![Watch the video](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1wjuowg3295futrs5b0j.png)](https://youtu.be/vR9zqIvoJWY)
+[![Watch the video](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1wjuowg3295futrs5b0j.png)](https://youtu.be/YvnL2nkzs0A)
 
 
 ## How it works
