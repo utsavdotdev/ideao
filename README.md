@@ -22,6 +22,9 @@ if(con){
 export default client
 ```
 ```client``` is the instance of Redis Client used for connection. ```REDIS_URL``` is the connection endpoint url provided by redis.
+
+## Important Links
+- Blog: [Click here](https://utsavbhattarai.hashnode.dev/meet-my-latest-project-ideao)
 #### Schema of Idea
 
 ```js
